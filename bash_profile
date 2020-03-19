@@ -2,6 +2,8 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
+export PATH=$HOME/.local/bin:$PATH
+
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
@@ -17,3 +19,7 @@ parse_git_branch() {
 }
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

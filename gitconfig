@@ -1,4 +1,6 @@
 [user]
+    useConfigOnly = true
+[user "github"]
 	name = Eric Tsai
 	email = chunchieh@gmail.com
 [alias]
@@ -9,6 +11,7 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; :"
 [color]
 	diff = auto
 	status = auto

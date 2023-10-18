@@ -24,3 +24,7 @@
 	default = simple
 [mergetool]
 	keepBackup = false
+[ssh]
+	variant = ssh
+[commit]
+	gpgsign = false
